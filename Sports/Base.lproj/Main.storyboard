@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2rv-4j-Zq0">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mhw-gh-Iif">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,16 +11,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+
+        <!--Details Collection View Controller-->
+        <scene sceneID="YNb-hV-RIz">
+            <objects>
+                <collectionViewController id="kuf-eU-dI0" customClass="DetailsCollectionViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yUH-HB-TN7">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g5d-Ro-1V4">
+                            <size key="itemSize" width="192" height="185"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="reI-Nv-AS5">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0kA-1s-zZX">
+                                    <rect key="frame" x="0.0" y="0.0" width="192" height="185"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="192" height="185"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="kuf-eU-dI0" id="wbz-C7-Nj4"/>
+                            <outlet property="delegate" destination="kuf-eU-dI0" id="DFy-Nl-x9H"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="elP-nD-ogi"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfo-Og-r3r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2924.6511627906975" y="-730.68669527896998"/>
+        </scene>
+        <!--Sports-->
         <scene sceneID="h1Q-rw-UT4">
             <objects>
                 <viewController id="g41-AX-Tsk" customClass="ViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z9d-Ps-HUi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qSG-jT-TxW">
-                                <rect key="frame" x="0.0" y="220.66666666666663" width="393" height="511"/>
+
+
+                                <rect key="frame" x="0.0" y="238.66666666666663" width="430" height="511"/>
+
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="393" id="U1u-6k-ofX"/>
@@ -32,14 +74,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sportCell" id="ORO-Zj-rIf" customClass="SportsCollectionViewCell" customModule="Sports" customModuleProvider="target">
-                                        <rect key="frame" x="75" y="0.0" width="243" height="284"/>
+                                        <rect key="frame" x="93.666666666666671" y="0.0" width="243" height="284"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ycC-fQ-3H0">
                                             <rect key="frame" x="0.0" y="0.0" width="243" height="284"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="football" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r37-4a-GQu">
-                                                    <rect key="frame" x="91.333333333333329" y="180" width="60.333333333333329" height="21.666666666666657"/>
+                                                    <rect key="frame" x="91.666666666666671" y="180" width="60.000000000000014" height="21.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -70,7 +112,12 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sporty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTI-e5-KmG">
-                                <rect key="frame" x="180.66666666666666" y="123.99999999999999" width="63.666666666666657" height="26.333333333333329"/>
+
+                                <rect key="frame" x="183.66666666666666" y="80" width="94.999999999999972" height="26.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="fNk-3n-bDt"/>
+                                </constraints>
+
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -227,24 +274,27 @@
             </objects>
             <point key="canvasLocation" x="1101.5267175572519" y="-24.647887323943664"/>
         </scene>
-        <!--Sports-->
-        <scene sceneID="8B5-TX-YmC">
+
+        <!--Navigation Controller-->
+        <scene sceneID="JPO-6G-7Vk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tbk-wB-FRr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sports" image="sportscourt.fill" catalog="system" id="XnR-yP-cTQ"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mhw-gh-Iif" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pfT-8s-PeO">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xF5-I6-ekp">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="g41-AX-Tsk" kind="relationship" relationship="rootViewController" id="MxS-hE-sUl"/>
+
+                        <segue destination="kuf-eU-dI0" kind="relationship" relationship="rootViewController" id="F5J-Q3-s1T"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rRc-CY-Wb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2h-Qw-NhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028.2442748091603" y="-24.647887323943664"/>
+            <point key="canvasLocation" x="2026.046511627907" y="-730.68669527896998"/>
+
         </scene>
     </scenes>
     <resources>
